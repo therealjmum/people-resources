@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reads</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐛</text></svg>">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #121212;
+      color: #e6e8ee;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      min-height: 100vh;
+      padding: 48px 24px;
+    }
+    .topbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 14px 28px;
+      background: #121212;
+      border-bottom: 1px solid #1d1f23;
+      z-index: 100;
+    }
+    .topbar-name { font-size: 0.85rem; font-weight: 600; color: #9ea3ad; letter-spacing: 0.05em; }
+    .page { max-width: 720px; margin: 48px auto 0; padding-top: 32px; }
+    h1 { font-size: 1.5rem; font-weight: 600; margin-bottom: 4px; }
+    .subtitle { font-size: 0.875rem; color: #7a7f89; margin-bottom: 40px; }
+    .section { margin-bottom: 40px; }
+    .section-title { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #7a7f89; margin-bottom: 16px; }
+    .group { margin-bottom: 24px; }
+    .group-label { font-size: 0.75rem; font-weight: 500; color: #9ea3ad; margin-bottom: 8px; }
+    .items { display: flex; flex-direction: column; gap: 6px; }
+    .card { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; padding: 12px 16px; border-radius: 6px; border: 1px solid #1d1f23; background: #181818; text-decoration: none; color: inherit; transition: border-color 0.15s, background 0.15s; }
+    .card:hover { border-color: #2d3038; background: #1d1f23; }
+    .card:hover .name { color: #9ca4f0; }
+    .card:hover .icon { color: #6a75e6; }
+    .card-body { display: flex; flex-direction: column; gap: 4px; min-width: 0; flex: 1; }
+    .card-top { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .name { font-size: 0.875rem; font-weight: 500; color: #e6e8ee; transition: color 0.15s; }
+    .desc { font-size: 0.775rem; color: #7a7f89; line-height: 1.4; }
+    .badge { flex-shrink: 0; font-size: 0.68rem; font-weight: 500; padding: 2px 7px; border-radius: 4px; white-space: nowrap; }
+    .icon { flex-shrink: 0; color: #494e5d; transition: color 0.15s; font-size: 0.75rem; padding-top: 2px; }
+    .b-blue   { background: rgba(65,81,216,0.2);  color: #d3d6fa; }
+    .b-green  { background: rgba(63,169,124,0.2); color: #a7dcc6; }
+    .b-amber  { background: rgba(201,162,77,0.2); color: #f1e0b2; }
+    .b-red    { background: rgba(196,74,74,0.2);  color: #f0b8b8; }
+    .b-steel  { background: rgba(107,134,166,0.2);color: #c6d3e1; }
+    .b-purple { background: rgba(160,100,220,0.2);color: #ddbefa; }
+  </style>
+</head>
+<body>
+<div class="topbar"><span class="topbar-name">jmum</span></div>
+<div class="page">
+  <h1>Reads</h1>
+  <p class="subtitle">Favorite reads, listens, and other open source things</p>
+
+  <!-- BOOKS -->
+  <div class="section">
+    <div class="section-title">Books</div>
+    <div class="items">
+      <a class="card" href="https://heathbrothers.com/books/the-power-of-moments/" target="_blank"><div class="card-body"><div class="card-top"><span class="name">The Power of Moments</span><span class="badge b-amber">Experiences</span></div><div class="desc">Why certain brief experiences have outsized impact on us, and how to create them intentionally.</div></div><span class="icon">↗</span></a>
+      <a class="card" href="https://www.radicalcandor.com/" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Radical Candor</span><span class="badge b-blue">Feedback</span></div><div class="desc">Kim Scott's framework for caring personally while challenging directly — the key to great leadership.</div></div><span class="icon">↗</span></a>
+      <a class="card" href="https://www.amazon.com/dp/0062273205" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Hard Thing About Hard Things</span><span class="badge b-green">Leadership</span></div><div class="desc">Ben Horowitz on the brutal, unglamorous realities of building and leading a company.</div></div><span class="icon">↗</span></a>
+      <a class="card" href="https://thewisemancollective.com/books/multipliers/" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Multipliers</span><span class="badge b-green">Leadership</span></div><div class="desc">Liz Wiseman on leaders who amplify the intelligence of those around them versus those who diminish it.</div></div><span class="icon">↗</span></a>
+      <a class="card" href="https://press.stripe.com/trillion-dollar-coach" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Trillion Dollar Coach</span><span class="badge b-green">Leadership</span></div><div class="desc">The leadership lessons of Bill Campbell, the coach behind Google, Apple, and Silicon Valley's greatest leaders.</div></div><span class="icon">↗</span></a>
+      <a class="card" href="https://www.amazon.com/dp/0399592091" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Ride of a Lifetime</span><span class="badge b-green">Leadership</span></div><div class="desc">Bob Iger's memoir on leading Disney through two decades of transformation, acquisition, and reinvention.</div></div><span class="icon">↗</span></a>
+      <a class="card" href="https://www.amazon.com/dp/0679762884" target="_blank"><div class="card-body"><div class="card-top"><span class="name">High Output Management</span><span class="badge b-green">Leadership</span></div><div class="desc">Andy Grove's timeless playbook for how managers can maximize the output of their teams and organizations.</div></div><span class="icon">↗</span></a>
+      <a class="card" href="https://www.amazon.com/dp/0679778314" target="_blank"><div class="card-body"><div class="card-top"><span class="name">The Inner Game of Tennis</span><span class="badge b-purple">Mental Game</span></div><div class="desc">Timothy Gallwey on quieting the inner critic to unlock peak performance — applies far beyond the court.</div></div><span class="icon">↗</span></a>
+      <a class="card" href="https://www.amazon.com/dp/1472924002" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Legacy</span><span class="badge b-green">Teamwork</span></div><div class="desc">James Kerr on the values and culture behind the All Blacks, the most successful sports team of all time.</div></div><span class="icon">↗</span></a>
+      <a class="card" href="https://www.amazon.com/dp/0787960756" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Five Dysfunctions of a Team</span><span class="badge b-green">Teamwork</span></div><div class="desc">Patrick Lencioni's fable on the root causes of team failure and how to build genuine trust and accountability.</div></div><span class="icon">↗</span></a>
+    </div>
+  </div>
+
+  <!-- NEWSLETTERS -->
+  <div class="section">
+    <div class="section-title">Newsletters</div>
+    <div class="items">
+      <a class="card" href="https://www.lennysnewsletter.com/" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Lenny's</span><span class="badge b-blue">Product</span></div><div class="desc">Weekly deep dives on product, growth, and career for PMs and operators.</div></div><span class="icon">↗</span></a>
+      <a class="card" href="https://mollyg.substack.com/" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Molly Graham's Substack</span><span class="badge b-green">Leadership</span></div><div class="desc">Practical frameworks for managing yourself and others through the chaos of hypergrowth.</div></div><span class="icon">↗</span></a>
+      <a class="card" href="https://newsletter.pragmaticengineer.com/" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Pragmatic Engineer</span><span class="badge b-steel">Engineering</span></div><div class="desc">The inside view on engineering culture, compensation, and what's really happening in Big Tech.</div></div><span class="icon">↗</span></a>
+      <a class="card" href="https://a16z.com/newsletter/" target="_blank"><div class="card-body"><div class="card-top"><span class="name">a16z</span><span class="badge b-blue">Tech</span></div><div class="desc">Andreessen Horowitz's perspectives on tech trends, company building, and the future.</div></div><span class="icon">↗</span></a>
+      <a class="card" href="https://www.andrew.today/" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Andrew Yeung</span><span class="badge b-green">Community</span></div><div class="desc">Curated insights on productivity, growth, and leadership for founders and operators in tech.</div></div><span class="icon">↗</span></a>
+      <a class="card" href="https://fortune.com/newsletters/term-sheet" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Term Sheet</span><span class="badge b-amber">Deals</span></div><div class="desc">Fortune's daily briefing on venture capital, private equity, and the deals shaping business.</div></div><span class="icon">↗</span></a>
+      <a class="card" href="https://www.onlycfo.io/" target="_blank"><div class="card-body"><div class="card-top"><span class="name">OnlyCFOs</span><span class="badge b-green">Finance</span></div><div class="desc">Finance strategy, metrics, and benchmarks for software company leaders.</div></div><span class="icon">↗</span></a>
+      <a class="card" href="https://press.stripe.com/scaling-people" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Scaling People</span><span class="badge b-blue">Management</span></div><div class="desc">Claire Hughes Johnson's tactical guide to management and company building drawn from Stripe and Google.</div></div><span class="icon">↗</span></a>
+      <a class="card" href="https://growth.eladgil.com/" target="_blank"><div class="card-body"><div class="card-top"><span class="name">High Growth Handbook</span><span class="badge b-steel">Scaling</span></div><div class="desc">Elad Gil's framework for navigating the hardest challenges of scaling a startup from 10 to 10,000 people.</div></div><span class="icon">↗</span></a>
+    </div>
+  </div>
+
+  <!-- PODCASTS -->
+  <div class="section">
+    <div class="section-title">Podcasts</div>
+    <div class="group">
+      <div class="group-label">Business &amp; Leaders</div>
+      <div class="items">
+        <a class="card" href="https://www.lennysnewsletter.com/podcast" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Lenny's Podcast</span><span class="badge b-blue">Product</span></div><div class="desc">Long-form interviews with the best product, growth, and ops leaders in tech.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://www.founderspodcast.com/" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Founders (David Senra)</span><span class="badge b-green">Leadership</span></div><div class="desc">Lessons from history's greatest entrepreneurs, one biography at a time.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://cheekypint.transistor.fm/" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Cheeky Pint</span><span class="badge b-purple">Tech &amp; Building</span></div><div class="desc">Stripe's John Collison in deep, candid conversation with the founders and leaders he admires most.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://colossus.com/series/invest-like-the-best/" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Invest Like the Best</span><span class="badge b-green">Investing</span></div><div class="desc">Patrick O'Shaughnessy explores ideas, methods, and stories with the world's best investors and founders.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://uncappedpod.com" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Uncapped</span><span class="badge b-purple">Tech &amp; Building</span></div><div class="desc">Jack Altman in honest conversations with founders and investors about what actually happens in venture.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://www.acquired.fm/" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Acquired</span><span class="badge b-purple">Tech &amp; Building</span></div><div class="desc">Ben and David do exhaustive, multi-hour deep dives into the greatest companies and business stories ever told.</div></div><span class="icon">↗</span></a>
+      </div>
+    </div>
+    <div class="group">
+      <div class="group-label">Tech</div>
+      <div class="items">
+        <a class="card" href="https://www.dwarkeshpatel.com/podcast" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Dwarkesh Podcast</span><span class="badge b-purple">Ideas</span></div><div class="desc">Long-form intellectual conversations on AI, science, history, and the biggest ideas of our time.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://www.tbpn.com/" target="_blank"><div class="card-body"><div class="card-top"><span class="name">TBPN</span><span class="badge b-blue">Tech</span></div><div class="desc">Daily live tech and business news with John Coogan and Jordi Hays — Silicon Valley's morning show.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://www.allinpodcast.co/" target="_blank"><div class="card-body"><div class="card-top"><span class="name">All In</span><span class="badge b-blue">Tech</span></div><div class="desc">Four tech investors debate markets, politics, and culture with zero filter each week.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://a16z.com/podcasts/" target="_blank"><div class="card-body"><div class="card-top"><span class="name">a16z Podcast</span><span class="badge b-blue">Tech</span></div><div class="desc">a16z partners and guests on the tech trends, startup ideas, and cultural shifts defining the next decade.</div></div><span class="icon">↗</span></a>
+      </div>
+    </div>
+    <div class="group">
+      <div class="group-label">News Digest</div>
+      <div class="items">
+        <a class="card" href="https://www.morningbrew.com/daily" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Morning Brew Daily</span><span class="badge b-blue">Business</span></div><div class="desc">The day's biggest business and tech news in a quick, entertaining daily podcast.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://www.nytimes.com/column/hard-fork" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Hard Fork</span><span class="badge b-blue">Tech</span></div><div class="desc">Kevin Roose and Casey Newton make sense of the week's most important tech stories every Friday.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://www.nytimes.com/column/the-daily" target="_blank"><div class="card-body"><div class="card-top"><span class="name">The Daily</span><span class="badge b-steel">News</span></div><div class="desc">NYT's flagship daily news podcast — 20 minutes of in-depth reporting on what matters most.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://nymag.com/tags/pivot-podcast/" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Pivot</span><span class="badge b-blue">Tech</span></div><div class="desc">Kara Swisher and Scott Galloway debate tech, business, and media twice a week with sharp, left-leaning takes.</div></div><span class="icon">↗</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- OPEN SOURCE CONTENT -->
+  <div style="margin-top: 72px; margin-bottom: 32px; border-top: 1px solid #2a2d35; padding-top: 48px;">
+    <p style="font-size: 0.75rem; color: #555a66; margin-bottom: 4px; letter-spacing: 0.08em; text-transform: uppercase;">Reference</p>
+    <p style="font-size: 0.8rem; color: #555a66; margin-bottom: 0;">Publicly available frameworks, templates, and guides across people ops disciplines.</p>
+  </div>
+  <div class="section">
+    <div class="section-title">Open Source Content</div>
+    <div class="group">
+      <div class="group-label">General People &amp; HR</div>
+      <div class="items">
+        <a class="card" href="https://www.cultureamp.com/blog/people-geekly" target="_blank"><div class="card-body"><div class="card-top"><span class="name">CultureAmp People Geekly</span><span class="badge b-green">People</span></div><div class="desc">Weekly research, case studies, and program design tips from the people science team at CultureAmp.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://recruitingbrainfood.com/" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Recruiting Brainfood (Hung Lee)</span><span class="badge b-blue">Recruiting</span></div><div class="desc">The essential weekly briefing for talent professionals — articles, research, and ideas every Sunday.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://peoplemanagingpeople.com/" target="_blank"><div class="card-body"><div class="card-top"><span class="name">People Managing People</span><span class="badge b-green">Management</span></div><div class="desc">Deep dives on leadership, culture, and people operations across the full HR spectrum.</div></div><span class="icon">↗</span></a>
+      </div>
+    </div>
+    <div class="group">
+      <div class="group-label">Hiring</div>
+      <div class="items">
+        <a class="card" href="https://a16z.com/executive-hiring/" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Executive Hiring (a16z)</span><span class="badge b-blue">Hiring</span></div><div class="desc">a16z's guide to hiring executives — what to look for, how to evaluate, and common mistakes to avoid.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://www.greenhouse.io/blog" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Greenhouse Blog</span><span class="badge b-blue">Hiring</span></div><div class="desc">Best practices for structured, equitable hiring — from job design to offer and everything in between.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://www.ashbyhq.com/blog" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Ashby Blog</span><span class="badge b-steel">Hiring</span></div><div class="desc">Modern recruiting operations, hiring strategy, and talent analytics for fast-growing teams.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://substack.com/@jordanmazer" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Jordan Mazer</span><span class="badge b-blue">Hiring</span></div><div class="desc">Tactical recruiting and people ops writing from an experienced operator building great teams.</div></div><span class="icon">↗</span></a>
+      </div>
+    </div>
+    <div class="group">
+      <div class="group-label">Onboarding</div>
+      <div class="items">
+        <a class="card" href="https://coda.io/@shishir/executive-onboarding" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Executive Onboarding (Shishir Mehrotra)</span><span class="badge b-green">Onboarding</span></div><div class="desc">Shishir Mehrotra's detailed onboarding framework for incoming executives — a model for structured leadership transitions.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://www.deel.com/blog/how-to-onboard-remote-employees/" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Deel: Onboarding Remote Employees</span><span class="badge b-blue">Onboarding</span></div><div class="desc">A practical guide to onboarding remote employees effectively across time zones and geographies.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://medium.com/levelshealth/a-deep-dive-into-levels-month-long-onboarding-program-e0c4144d9c27" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Levels Health: Month-Long Onboarding</span><span class="badge b-steel">Onboarding</span></div><div class="desc">A deep dive into Levels' month-long onboarding program — a template for immersive, thoughtful new hire experiences.</div></div><span class="icon">↗</span></a>
+      </div>
+    </div>
+    <div class="group">
+      <div class="group-label">Performance</div>
+      <div class="items">
+        <a class="card" href="https://a16z.com/making-yourself-a-ceo/" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Making Yourself a CEO (a16z)</span><span class="badge b-blue">Performance</span></div><div class="desc">a16z on the specific skills and mindsets founders need to develop as they grow into the CEO role.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://docs.google.com/document/d/18FiJbYn53fTtPmphfdCKT2TMWH-8Y2L-MLqDk-MFV4s/edit?tab=t.0" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Mochary Method</span><span class="badge b-purple">Performance</span></div><div class="desc">Matt Mochary's live coaching document — the management playbook used with top Silicon Valley CEOs.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://www.radicalcandor.com/" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Radical Candor</span><span class="badge b-green">Feedback</span></div><div class="desc">Kim Scott's framework and resource hub for caring personally while challenging directly.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://lattice.com/articles/hrs-guide-to-performance-review-questions" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Lattice: Performance Review Questions</span><span class="badge b-blue">Performance</span></div><div class="desc">Question frameworks and best practices for running effective, fair performance review cycles.</div></div><span class="icon">↗</span></a>
+      </div>
+    </div>
+    <div class="group">
+      <div class="group-label">Retention &amp; Engagement</div>
+      <div class="items">
+        <a class="card" href="https://pmarchive.com/guide_to_big_companies_part2.html" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Marc Andreessen: Guide to Big Companies</span><span class="badge b-amber">Retention</span></div><div class="desc">Marc Andreessen on how to thrive inside large organizations — useful for understanding what keeps great people engaged.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://www.gallup.com/workplace/home.aspx" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Gallup at Work</span><span class="badge b-amber">Engagement</span></div><div class="desc">The Q12 research and State of the Global Workplace report — the gold standard for engagement benchmarks.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://www.cultureamp.com/blog/employee-engagement-guide" target="_blank"><div class="card-body"><div class="card-top"><span class="name">CultureAmp Blog</span><span class="badge b-green">Engagement</span></div><div class="desc">Employee listening, survey design, and engagement strategy from the pioneers of people analytics.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://lattice.com/articles/employee-engagement-survey-questions" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Lattice: Engagement Survey Questions</span><span class="badge b-blue">Engagement</span></div><div class="desc">A curated bank of engagement survey questions from Lattice to build an effective employee listening program.</div></div><span class="icon">↗</span></a>
+      </div>
+    </div>
+    <div class="group">
+      <div class="group-label">Org Design</div>
+      <div class="items">
+        <a class="card" href="https://growth.eladgil.com/book/chapter-5-organizational-structure-and-hypergrowth/organizational-growth-is-all-about-pragmatism/" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Organizational Growth & Pragmatism (Elad Gil)</span><span class="badge b-purple">Org Design</span></div><div class="desc">Elad Gil on how to think about organizational structure during hypergrowth — pragmatism over dogma.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://a16z.com/taking-the-mystery-out-of-scaling-a-company/" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Taking the Mystery Out of Scaling (a16z)</span><span class="badge b-blue">Scaling</span></div><div class="desc">a16z on the patterns and principles behind scaling a company — people, process, and structure as you grow.</div></div><span class="icon">↗</span></a>
+      </div>
+    </div>
+    <div class="group">
+      <div class="group-label">US Benefits</div>
+      <div class="items">
+        <a class="card" href="https://www.deel.com/blog/types-of-employee-benefits/" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Employee Benefits 101 (Deel)</span><span class="badge b-green">Benefits</span></div><div class="desc">Deel's primer on types of employee benefits — a useful reference for designing or auditing a benefits package.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://www.joincocoon.com" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Cocoon Parental Leave</span><span class="badge b-green">Benefits</span></div><div class="desc">Resources and guides on designing and administering parental leave programs that actually support employees.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://www.sequoia.com" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Sequoia Benefits Benchmarking</span><span class="badge b-steel">Benefits</span></div><div class="desc">Sequoia's annual benefits benchmarking reports — a go-to for understanding what competitive packages look like.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://thatch.com/blog/epo-vs-ppo" target="_blank"><div class="card-body"><div class="card-top"><span class="name">EPO vs PPO (Thatch)</span><span class="badge b-blue">Benefits</span></div><div class="desc">Thatch breaks down the difference between EPO and PPO health plans — a clear guide for employees and HR teams alike.</div></div><span class="icon">↗</span></a>
+      </div>
+    </div>
+    <div class="group">
+      <div class="group-label">Compensation</div>
+      <div class="items">
+        <a class="card" href="https://mollyg.substack.com/p/implementing-compensation-for-startups?utm_source=substack&utm_medium=email" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Implementing Comp for Startups (Molly Graham)</span><span class="badge b-green">Compensation</span></div><div class="desc">Molly Graham's practical guide to designing and implementing a compensation framework at an early-stage startup.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://www.levels.fyi" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Levels.fyi</span><span class="badge b-amber">Compensation</span></div><div class="desc">Real-time, crowdsourced compensation data across tech companies — the most trusted comp benchmarking source.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://carta.com/learn/startups/compensation/compensation-philosophy/" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Carta Compensation Insights</span><span class="badge b-steel">Compensation</span></div><div class="desc">Equity and total compensation data and strategy for startups and growth-stage companies.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://www.pave.com/blog-posts/compensation-philosophy-what-it-is-and-how-to-build-one" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Pave</span><span class="badge b-blue">Compensation</span></div><div class="desc">Real-time compensation benchmarking and total rewards analytics built for high-growth companies.</div></div><span class="icon">↗</span></a>
+      </div>
+    </div>
+    <div class="group">
+      <div class="group-label">Legal</div>
+      <div class="items">
+        <a class="card" href="https://www.hixsonnagatani.com/" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Hixson Nagatani</span><span class="badge b-amber">Employment</span></div><div class="desc">US employment law updates with deep expertise in California — practical guidance for HR and legal teams.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://www.orrick.com/en/Insights" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Orrick</span><span class="badge b-red">Legal</span></div><div class="desc">Insights from one of tech's leading employment law firms on workforce, equity, and regulatory issues.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://www.hklaw.com/en/insights" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Holland &amp; Knight</span><span class="badge b-red">Employment</span></div><div class="desc">Practical US employment law guidance covering labor relations, compliance, and workplace policy.</div></div><span class="icon">↗</span></a>
+      </div>
+    </div>
+    <div class="group">
+      <div class="group-label">Firing</div>
+      <div class="items">
+        <a class="card" href="https://docs.google.com/document/d/1J3c8lGMzPJXMMSWNIh7UCsv-_4qKYZkrkwloIbu3BW8/edit?tab=t.0" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Firing Well (Mochary Method)</span><span class="badge b-red">Firing</span></div><div class="desc">Matt Mochary's guide to handling terminations with clarity, compassion, and legal care.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://a16z.com/preparing-to-fire-an-executive/" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Preparing to Fire an Executive (a16z)</span><span class="badge b-red">Firing</span></div><div class="desc">a16z on the hard process of letting go of an executive — how to know when, prepare well, and execute thoughtfully.</div></div><span class="icon">↗</span></a>
+      </div>
+    </div>
+    <div class="group">
+      <div class="group-label">Offboarding</div>
+      <div class="items">
+        <a class="card" href="https://www.rippling.com/blog/offboarding-checklist" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Offboarding Checklist (Rippling)</span><span class="badge b-blue">Offboarding</span></div><div class="desc">A practical offboarding checklist from Rippling covering IT, HR, and people steps for a clean employee exit.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://www.adp.com/resources/articles-and-insights/articles/o/offboarding.aspx" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Offboarding Guide (ADP)</span><span class="badge b-steel">Offboarding</span></div><div class="desc">ADP's overview of offboarding best practices — what to cover legally, operationally, and interpersonally.</div></div><span class="icon">↗</span></a>
+      </div>
+    </div>
+    <div class="group">
+      <div class="group-label">Other</div>
+      <div class="items">
+        <a class="card" href="https://coda.io/@clairehughesjohnson/claires-offsite-toolkit" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Offsite Design Toolkit</span><span class="badge b-purple">Offsites</span></div><div class="desc">Claire Hughes Johnson's practical toolkit for designing effective offsites — structure, exercises, and facilitation tips.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://growth.eladgil.com/book/the-role-of-the-ceo/insights-working-with-claire/" target="_blank"><div class="card-body"><div class="card-top"><span class="name">User Manuals (Elad Gil)</span><span class="badge b-steel">Culture</span></div><div class="desc">Claire Hughes Johnson on writing a personal user manual — a powerful tool for building trust and reducing friction on teams.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://steinkamp.us/posts/2022-11-10-what-i-learned-at-stripe" target="_blank"><div class="card-body"><div class="card-top"><span class="name">What I Learned at Stripe</span><span class="badge b-blue">Culture</span></div><div class="desc">A candid reflection on the operating principles, culture, and lessons from inside one of the world's best-run companies.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://addyosmani.com/blog/high-leverage-activites/" target="_blank"><div class="card-body"><div class="card-top"><span class="name">High Leverage Activities</span><span class="badge b-amber">Productivity</span></div><div class="desc">Addy Osmani on how to identify and ruthlessly prioritize the work that actually moves the needle.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://ssir.org/articles/entry/burnout_from_an_organizational_perspective?utm_source=pocket_reader" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Burnout: An Organizational Perspective</span><span class="badge b-red">Wellbeing</span></div><div class="desc">SSIR on why burnout is a systemic problem, not an individual failing — and what organizations must do about it.</div></div><span class="icon">↗</span></a>
+        <a class="card" href="https://www.lifelabslearning.com/blog/burnout-risk-audit" target="_blank"><div class="card-body"><div class="card-top"><span class="name">Burnout Risk Audit</span><span class="badge b-red">Wellbeing</span></div><div class="desc">LifeLabs Learning's practical audit to identify burnout risk factors in yourself and your team before they compound.</div></div><span class="icon">↗</span></a>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
