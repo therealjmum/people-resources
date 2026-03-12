@@ -3,4 +3,4 @@ Open source people resources
 
 Built using claude code x jmum content
 
-Website here: 
+Website here: https://therealjmum.github.io/people-resources/
